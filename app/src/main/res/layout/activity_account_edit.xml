@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:gravity="center"
+    android:background="@drawable/bgimage"
+    tools:context=".AccountEdit">
+
+    <TextView
+        android:id="@+id/textViewUpdateAccount"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="Update Account"
+        android:textColor = "@color/teal_700"
+        android:background="@drawable/custom_box_view"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        app:startIconDrawable="@drawable/baseline_account_box_24"
+        app:endIconMode="clear_text"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType= "textCapWords"
+            android:maxLines="1"
+            android:textSize="15dp"
+            android:hint="Full Name"
+            android:textColorHint="@color/teal_700">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:startIconDrawable="@drawable/baseline_phone_iphone_24"
+        app:endIconMode="clear_text"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="15dp"
+            android:inputType="phone"
+            android:hint="Mobile"
+            android:textColorHint="@color/teal_700">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:startIconDrawable="@drawable/baseline_contact_mail_24"
+        app:endIconMode="clear_text"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="15dp"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:enabled="false"
+            android:textColorHint="@color/teal_700">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:startIconDrawable="@drawable/baseline_lock_person_24"
+        app:endIconMode="password_toggle"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPwd"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:maxLines="1"
+            android:hint="Password"
+            android:enabled="false"
+            android:textColorHint="@color/teal_700">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<TextView
+        android:id="@+id/txtViewMobile"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:text="Mobile Number"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtViewUserName" />-->
+
+    <!--<EditText
+        android:id="@+id/editTextMobile"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:hint="Enter the Mobile Number"
+        android:inputType="text"
+        android:layout_toRightOf="@+id/txtViewMobile"
+        android:layout_below="@+id/editTextUserName"/>-->
+
+    <!--<TextView
+        android:id="@+id/txtViewEmail"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        android:text="E-Mail ID"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtViewMobile" />-->
+
+    <!--<EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:hint="Enter Email ID"
+        android:focusable="false"
+        android:inputType="text"
+        android:maxLength="20"
+        android:layout_toRightOf="@+id/txtViewEmail"
+        android:layout_below="@id/editTextMobile"/>-->
+
+    <!--<TextView
+        android:id="@+id/txtViewPwd"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        android:text="Password"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtViewEmail" />-->
+
+    <!--<EditText
+        android:id="@+id/editTextPwd"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:hint="Enter Password"
+        android:focusable="false"
+        android:inputType="text"
+        android:maxLength="20"
+        android:layout_toRightOf="@+id/txtViewPwd"
+        android:layout_below="@id/editTextEmail"/>-->
+
+    <!--<TextView
+        android:id="@+id/txtViewUserName"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="UserName"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/textViewName" />-->
+
+    <!--<EditText
+        android:id="@+id/editTextUserName"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:hint="Enter the UserName"
+        android:inputType="text"
+        android:layout_toRightOf="@+id/txtViewUserName"
+        android:layout_below="@+id/editTextName" />-->
+
+    <!--<TextView
+        android:id="@+id/textViewName"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:text="Full Name"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_below="@+id/textViewUpdateAccount" />-->
+
+    <!--<EditText
+        android:id="@+id/editTextName"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:layout_toRightOf="@+id/textViewName"
+        android:layout_below="@+id/textViewUpdateAccount"
+        android:hint="Enter the Full Name" />-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@color/white"
+        android:layout_marginStart="30dp"
+        android:text="Back" />
+
+    </LinearLayout>
+
+</LinearLayout>

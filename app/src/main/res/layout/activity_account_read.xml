@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimage"
+    tools:context=".AccountRead">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/teal_700"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+
+    <TextView
+        android:id="@+id/textViewAccount"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:textColor = "@color/teal_700"
+        android:background="@drawable/custom_box_view"
+        android:text="Account Info"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!--<TextView
+        android:id="@+id/textViewNameRead"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor = "?android:textColorPrimary"
+        android:text="Full Name"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textViewAccount"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/accReadLinear"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewAccount"
+        android:gravity="center">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/teal_700"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txtViewNameAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey"/> </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile"
+                android:textColor="@color/teal_700"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/txtViewMobileAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="19sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/grey"/> </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/teal_700"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/txtViewEmailAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="19sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/grey"/> </LinearLayout>
+    </LinearLayout>
+
+    <!--<TextView
+        android:id="@+id/textViewUserNameRead"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textViewNameRead"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="35dp"
+        android:text="UserName"
+        android:textColor = "?android:textColorPrimary"
+        android:gravity="center_vertical"
+        android:textSize="18sp" />-->
+
+    <!--<TextView
+        android:id="@+id/txtViewUserNameAccount"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/textViewUserNameRead"
+        android:layout_below="@+id/txtViewNameAccount"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp" />
+-->
+    <!--<TextView
+        android:id="@+id/textViewMobileRead"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textViewUserNameRead"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical"
+        android:textColor = "?android:textColorPrimary"
+        android:text="Mobile Number"
+        android:textSize="18sp" />
+-->
+    <!--<TextView
+        android:id="@+id/txtViewMobileAccount"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/txtViewUserNameAccount"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@+id/textViewMobileRead"
+        android:gravity="center_vertical"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp" />-->
+
+    <!--<TextView
+        android:id="@+id/textViewEmailRead"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textViewMobileRead"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="35dp"
+        android:textColor = "?android:textColorPrimary"
+        android:gravity="center_vertical"
+        android:text="E-mail ID"
+        android:textSize="18sp" />-->
+
+    <!--<TextView
+        android:id="@+id/txtViewEmailAccount"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/txtViewMobileAccount"
+        android:layout_toRightOf="@+id/textViewEmailRead"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/teal_700"
+        android:gravity="center_vertical"
+        android:textSize="18sp" />-->
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accReadLinear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Edit"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

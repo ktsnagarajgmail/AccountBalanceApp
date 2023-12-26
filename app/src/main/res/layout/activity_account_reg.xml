@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimage"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="15dp"
+    tools:context=".AccountReg">
+
+    <TextView
+        android:id="@+id/textViewReg"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="Create Account"
+        android:textColor = "@color/teal_700"
+        android:background="@drawable/custom_box_view"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="60dp"
+            app:startIconDrawable="@drawable/baseline_account_box_24"
+            app:endIconMode="clear_text"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextRegName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:hint="Full Name"
+                android:inputType= "textCapWords"
+                android:maxLines="1"
+                android:textColorHint="@color/teal_700"
+                android:nextFocusDown="@id/editTextRegMobile">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:startIconDrawable="@drawable/baseline_phone_iphone_24"
+        app:endIconMode="clear_text"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextRegMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="15dp"
+            android:inputType="phone"
+            android:hint="Mobile"
+            android:textColorHint="@color/teal_700"
+            android:nextFocusDown="@id/editTextRegEmail">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:startIconDrawable="@drawable/baseline_contact_mail_24"
+        app:endIconMode="clear_text"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextRegEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="15dp"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:nextFocusDown="@id/editTextRegPwd"
+            android:textColorHint="@color/teal_700">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:startIconDrawable="@drawable/baseline_lock_person_24"
+        app:endIconMode="password_toggle"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextRegPwd"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="15dp"
+            android:hint="Password"
+            android:nextFocusDown="@id/btnRegSave"
+            android:textColorHint="@color/teal_700">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<TextView
+        android:id="@+id/txtViewRegMobile"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:text="Mobile Number"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtViewRegUserName" />-->
+
+   <!-- <EditText
+        android:id="@+id/editTextRegMobile"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:hint="Enter the Mobile Number"
+        android:inputType="text"
+        android:layout_toRightOf="@+id/txtViewRegMobile"
+        android:layout_below="@+id/editTextRegUserName"/>-->
+
+    <!--<TextView
+        android:id="@+id/txtViewRegEmail"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        android:text="E-Mail ID"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtViewRegMobile" />-->
+
+    <!--<EditText
+        android:id="@+id/editTextRegEmail"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:hint="Enter Email ID"
+        android:inputType="text"
+        android:maxLength="20"
+        android:layout_toRightOf="@+id/txtViewRegEmail"
+        android:layout_below="@id/editTextRegMobile"/>-->
+
+    <!--<TextView
+        android:id="@+id/txtViewRegPwd"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        android:text="Password"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtViewRegEmail" />-->
+
+    <!--<EditText
+        android:id="@+id/editTextRegPwd"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:hint="Enter Password"
+        android:inputType="text"
+        android:maxLength="20"
+        android:layout_toRightOf="@+id/txtViewRegPwd"
+        android:layout_below="@id/editTextRegEmail"/>-->
+
+    <!--<TextView
+        android:id="@+id/txtViewRegUserName"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="UserName"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/textViewRegName" />-->
+
+    <!--<EditText
+        android:id="@+id/editTextRegUserName"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:hint="Enter the UserName"
+        android:inputType="text"
+        android:layout_toRightOf="@+id/txtViewRegUserName"
+        android:layout_below="@+id/editTextRegName" />
+-->
+    <!--<TextView
+        android:id="@+id/textViewRegName"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:text="Full Name"
+        android:textColor = "?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_below="@+id/textViewReg" />-->
+
+    <!--<EditText
+        android:id="@+id/editTextRegName"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:layout_toRightOf="@+id/textViewRegName"
+        android:layout_below="@+id/textViewReg"
+        android:hint="Enter the Full Name" />-->
+
+    <Button
+        android:id="@+id/btnRegSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:layout_marginBottom="100dp"/>
+
+</LinearLayout>

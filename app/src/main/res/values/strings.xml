@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Account Balance</string>
+    <string name="click_regis">If not yet, \n <u>click here to create account!</u></string>
+</resources>

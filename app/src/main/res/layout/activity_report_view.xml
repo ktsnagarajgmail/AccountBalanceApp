@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/reportViewLayout"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/idType"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Type"
+            android:textColor = "?android:textColorPrimary" />
+
+
+        <!--text view for our course duration-->
+        <TextView
+            android:id="@+id/idAmount"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Amount"
+            android:textColor = "?android:textColorPrimary" />
+
+        <TextView
+            android:id="@+id/idDesc"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Description"
+            android:textColor = "?android:textColorPrimary" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVCourses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/reportViewLayout"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/teal_700"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

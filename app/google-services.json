@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "642919672669",
+    "project_id": "accountbalanceapp",
+    "storage_bucket": "accountbalanceapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642919672669:android:32bc60dbcd9acaf25016b4",
+        "android_client_info": {
+          "package_name": "com.example.accountbalanceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKgN82G4UBwm54NopSLdBfYGjXPEQOg4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

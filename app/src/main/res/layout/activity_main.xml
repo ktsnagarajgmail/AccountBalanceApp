@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textColor = "?android:textColorPrimary"
+    android:background="@drawable/bgimage"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:background="@drawable/custom_box_cardview"
+        android:id="@+id/mainCardViewLayout"
+        android:layout_marginTop="100dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/mainCardViewName"
+                android:text="Nagaraj Thangaraj"
+                android:textSize="22dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/gold"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:paddingStart="10dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_downward_24"/>
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Credits" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCreditValue"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="0.00"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingStart="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_upward_24"/>
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Debits"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDebitValue"
+                android:paddingStart="10dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="0.00"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingStart="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_account_balance_wallet_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Account Balance"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:id="@+id/txtABValue"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="0.00"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<TextView
+        android:id="@+id/txtCreditView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        android:text="..Credits : "
+        android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />-->
+    <!--<TextView
+        android:id="@+id/txtDebitView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txtCreditView"
+        android:text=" Debits.. : "
+        android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />-->
+    <!--<TextView
+        android:id="@+id/txtABView"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/txtDebitView"
+        android:text="Account Balance : "
+        android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="25dp"
+        android:textStyle="bold" />-->
+    <!--<TextView
+        android:id="@+id/txtCreditValue"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@+id/txtCreditView"
+        android:textAlignment="center"
+        android:text="..."
+        android:textColor="?android:textColorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />-->
+    <!--<TextView
+        android:id="@+id/txtDebitValue"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/txtDebitView"
+        android:layout_below="@+id/txtCreditValue"
+        android:textAlignment="center"
+        android:text="..."
+        android:textColor="?android:textColorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />-->
+
+   <!-- <TextView
+        android:id="@+id/txtABValue"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/txtABView"
+        android:layout_below="@+id/txtDebitValue"
+        android:textAlignment="center"
+        android:text="..."
+        android:textColor="?android:textColorPrimary"
+        android:textSize="25dp"
+        android:textStyle="bold" />-->
+
+    <TextView
+        android:id="@+id/top5Debits"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainCardViewLayout"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="Top 5 Debits"
+        android:background="@drawable/custom_box_cardview"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top5Debits"
+        android:orientation="vertical"
+        android:padding="4dp">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reportViewLayoutMain"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/top5Debits"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Type"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            <!--text view for our course duration-->
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Amount"
+                android:textColor = "@color/black" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Description"
+                android:textColor = "@color/black" />
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="20dp"
+                android:id="@+id/itemOneType"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            &lt;!&ndash;text view for our course duration&ndash;&gt;
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemOneAmt"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemOneDesc"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="20dp"
+                android:id="@+id/itemTwoType"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            &lt;!&ndash;text view for our course duration&ndash;&gt;
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemTwoAmt"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemTwoDesc"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="20dp"
+                android:id="@+id/itemThreeType"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            &lt;!&ndash;text view for our course duration&ndash;&gt;
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemThreeAmt"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemThreeDesc"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="20dp"
+                android:id="@+id/itemFourType"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            &lt;!&ndash;text view for our course duration&ndash;&gt;
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemFourAmt"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemFourDesc"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="20dp"
+                android:id="@+id/itemFiveType"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            &lt;!&ndash;text view for our course duration&ndash;&gt;
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemFiveAmt"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemFiveDesc"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor = "@color/black" />
+        </LinearLayout>-->
+
+
+   <!-- </LinearLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVCoursesMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/reportViewLayoutMain"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/teal_700"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="100dp"
+        android:clickable="true"
+        android:backgroundTint="@color/teal_700"
+        android:src="@drawable/baseline_add_circle_outline_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap on '+' to add new item"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_marginBottom="60dp"
+        android:textColor="@color/teal_700"/>
+
+    <!--  <Button
+          android:id="@+id/buttonReport"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Button"
+          android:backgroundTint="@color/teal_700"
+          android:layout_marginStart="100dp"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="100dp"/>-->
+
+    <!--<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAct"
+        android:layout_below="@+id/txtABView"
+        android:layout_marginTop="20dp"
+        android:text="Account"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReport"
+        android:layout_below="@+id/txtABView"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/btnAct"
+        android:text="Report"/>-->
+
+
+</RelativeLayout>

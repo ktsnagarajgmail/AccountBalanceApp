@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_box_cardview"
+    tools:context=".NewItems">
+
+    <TextView
+        android:id="@+id/txtViewNewEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:text="New Entry"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:layout_width="394dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/txtViewNewEntry"
+        android:id="@+id/rdG"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rdCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit(+)"
+            android:textColor="@color/white"
+            android:layout_marginStart="25dp"/>
+
+        <RadioButton
+            android:id="@+id/rdDebit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Debit(-)"
+            android:textColor="@color/white"
+            android:layout_marginStart="35dp"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editAmount"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rdG"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:hint="0.00"
+        android:textColorHint="@color/white"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editDesc"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:inputType= "textCapWords"
+        android:textColorHint="@color/white"
+        android:layout_toRightOf="@+id/editAmount"
+        android:layout_below="@+id/rdG"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_below="@+id/editAmount"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Add" />
+
+</RelativeLayout>
