@@ -6,12 +6,16 @@
         android:title="Home"
         android:icon="@drawable/baseline_home_24" />
     <item
+        android:id="@+id/split_with"
+        android:title="SplitWith"
+        android:icon="@drawable/baseline_diversity_3_24" />
+    <item
         android:id="@+id/account"
         android:title="Account"
         android:icon="@drawable/baseline_account_box_24" />
     <item
         android:id="@+id/report"
-        android:title="Report"
+        android:title="Activity"
         android:icon="@drawable/baseline_view_list_24" />
 
 </menu>

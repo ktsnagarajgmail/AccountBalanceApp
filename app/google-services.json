@@ -1,26 +1,36 @@
 {
   "project_info": {
-    "project_number": "642919672669",
-    "project_id": "accountbalanceapp",
-    "storage_bucket": "accountbalanceapp.appspot.com"
+    "project_number": "319140683369",
+    "project_id": "accountbalance-aa99d",
+    "storage_bucket": "accountbalance-aa99d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:642919672669:android:32bc60dbcd9acaf25016b4",
+        "mobilesdk_app_id": "1:319140683369:android:9182aed07cd2c75d2bccf8",
         "android_client_info": {
-          "package_name": "com.example.accountbalanceapp"
+          "package_name": "com.actbal.accountbalanceapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "319140683369-fe38beg4rtu1qhgrfmetjgcsn1i4blkd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBKgN82G4UBwm54NopSLdBfYGjXPEQOg4g"
+          "current_key": "AIzaSyDKHOfxTUIP22Sbsht9FWMHY9_IIZ3sSa4"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319140683369-fe38beg4rtu1qhgrfmetjgcsn1i4blkd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

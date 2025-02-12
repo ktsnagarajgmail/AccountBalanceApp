@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Split">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+    <EditText
+        android:id="@+id/editAmount"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:hint="0.00"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editDesc"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="description"
+        android:inputType= "textCapWords"
+        android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/splitwith"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="split with email id"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Submit Email ID's"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/newItemsEmailIdsBtn"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dropdown_splitmenu"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/teal_700"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <AutoCompleteTextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/autocompletedrodown"
+            android:hint="Paid By"
+            android:inputType="none"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="297dp"
+        android:orientation="vertical"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:id="@+id/fragmentLinearLayout">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayoutFragments"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:requiresFadingEdge="horizontal">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/baseline_money_off_24"
+                android:text="Equally" />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/baseline_equalizer_24"
+                android:text="Share"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/baseline_percent_24"
+                android:text="Percent"/>
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpagerFragment"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/teal_900"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Add" />
+
+</LinearLayout>

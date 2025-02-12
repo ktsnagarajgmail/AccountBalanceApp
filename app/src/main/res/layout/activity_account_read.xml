@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgimage"
     tools:context=".AccountRead">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -16,43 +15,205 @@
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:menu="@menu/menu_navigation" />
-
-    <TextView
-        android:id="@+id/textViewAccount"
-        android:layout_width="250dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:textColor = "@color/teal_700"
-        android:background="@drawable/custom_box_view"
-        android:text="Account Info"
-        android:layout_marginTop="80dp"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <!--<TextView
-        android:id="@+id/textViewNameRead"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:textSize="18sp"
-        android:textColor = "?android:textColorPrimary"
-        android:text="Full Name"
-        android:gravity="center_vertical"
-        android:layout_below="@+id/textViewAccount"
+    
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="50dp"
-        android:layout_marginStart="18dp" />-->
-
+        android:layout_marginStart="30dp"
+        android:background="@color/teal_200"
+        android:id="@+id/profileImageView"
+        android:src="@drawable/profile"
+        app:shapeAppearanceOverlay="@style/circular"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:id="@+id/accReadLinear"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="60dp"
-        android:padding="15dp"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@+id/profileImageView">
+        <TextView
+            android:id="@+id/txtViewNameAccount"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:layout_marginStart="15dp"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/txtViewEmailAccount"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:textSize="14sp" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/divider_one"
+            app:dividerColor="@color/grey"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        android:layout_below="@id/profileImageView"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="Rate AccountBalance"
+        android:textAllCaps="false"
+        android:layout_marginStart="40dp"
+        android:layout_below="@+id/profileImageView"
+        android:layout_marginTop="80dp"
+        android:id="@+id/btn_rate_account_balance"
+        android:drawableLeft="@drawable/star"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="Contact Support Team"
+        android:textAllCaps="false"
+        android:layout_marginStart="40dp"
+        android:layout_below="@+id/btn_rate_account_balance"
+        android:id="@+id/btn_contact_support_team"
+        android:drawableLeft="@drawable/baseline_email_24"/>
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divider_two"
+        app:dividerColor="@color/grey"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textViewAccount"
-        android:gravity="center">
-<LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/btn_contact_support_team"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Account"
+        android:layout_marginStart="20dp"
+        android:textAllCaps="false"
+        android:id="@+id/btn_act_read_delete_account"
+        android:layout_below="@+id/divider_two"
+        android:layout_marginTop="10sp"
+        android:textSize="16sp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:textSize="16sp"
+        android:text="Logout"
+        android:id="@+id/btn_act_read_logout"
+        android:textAllCaps="false"
+        android:textColor="@color/red"
+        android:drawableLeft="@drawable/logout"
+        android:layout_below="@+id/btn_act_read_delete_account"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divider_three"
+        app:dividerColor="@color/grey"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btn_act_read_logout"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/divider_three"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Made with Nexzsoft"
+            android:textSize="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/teal_700"
+            android:text="Privacy Policy"
+            android:id="@+id/tv_act_read_privacy_policy"
+            android:textSize="12dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Release version 1.0.0"
+            android:textSize="12dp"/>
+    </LinearLayout>
+</RelativeLayout>
+    <!--<Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/accReadLinear"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:text="Edit"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>-->
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/tv_act_read_delete_account"
+        android:layout_below="@+id/btnEdit"
+        android:text="Delete Account"
+        android:textStyle="bold"
+        android:paddingStart="15dp"
+        android:textSize="18dp"
+        android:textColor="@color/red"/>-->
+    <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear_act_read_logout"
+            android:layout_below="@+id/btn_act_read_delete_account"
+            android:gravity="left"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:src="@drawable/baseline_logout_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_act_read_logout"
+                android:text="Logout"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:textSize="16dp"
+                android:textColor="@color/black"/>
+        </LinearLayout>-->
+    <!--<TextView
+     android:id="@+id/textViewNameRead"
+     android:layout_width="125dp"
+     android:layout_height="40dp"
+     android:textSize="18sp"
+     android:textColor = "?android:textColorPrimary"
+     android:text="Full Name"
+     android:gravity="center_vertical"
+     android:layout_below="@+id/textViewAccount"
+     android:layout_marginTop="50dp"
+     android:layout_marginStart="18dp" />-->
+<!--<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -64,16 +225,13 @@
             android:textColor="@color/teal_700"
             android:textSize="14sp"/>
         <TextView
-            android:id="@+id/txtViewNameAccount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="19sp" />
-        <TextView
-            android:layout_width="match_parent"
+            android:layout_width="50dp"
             android:layout_height="1dp"
-            android:layout_marginTop="15dp"
-            android:background="@color/grey"/> </LinearLayout>
+            android:layout_marginTop="1dp"
+            android:layout_gravity="left"
+            android:background="@color/grey"/>
+
+         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,16 +246,18 @@
                 android:textColor="@color/teal_700"
                 android:textSize="14sp"/>
             <TextView
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="left"
+                android:background="@color/grey"/>
+            <TextView
                 android:id="@+id/txtViewMobileAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="19sp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@color/grey"/> </LinearLayout>
+            </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,17 +272,14 @@
                 android:textColor="@color/teal_700"
                 android:textSize="14sp"/>
             <TextView
-                android:id="@+id/txtViewEmailAccount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="19sp" />
-            <TextView
-                android:layout_width="match_parent"
+                android:layout_width="50dp"
                 android:layout_height="1dp"
-                android:layout_marginTop="15dp"
-                android:background="@color/grey"/> </LinearLayout>
-    </LinearLayout>
+                android:layout_marginTop="1dp"
+                android:layout_gravity="left"
+                android:background="@color/grey"/>
+
+            </LinearLayout>
+    </LinearLayout>-->
 
     <!--<TextView
         android:id="@+id/textViewUserNameRead"
@@ -183,7 +340,6 @@
         android:gravity="center_vertical"
         android:text="E-mail ID"
         android:textSize="18sp" />-->
-
     <!--<TextView
         android:id="@+id/txtViewEmailAccount"
         android:layout_width="240dp"
@@ -196,16 +352,3 @@
         android:gravity="center_vertical"
         android:textSize="18sp" />-->
 
-    <Button
-        android:id="@+id/btnEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/accReadLinear"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Edit"
-        android:backgroundTint="@color/teal_700"
-        android:textColor="@color/white"
-        android:textStyle="bold"/>
-
-</RelativeLayout>

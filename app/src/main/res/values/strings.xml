@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Account Balance</string>
     <string name="click_regis">If not yet, \n <u>click here to create account!</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="splitdropdown">
+        <item>Split Equally</item>
+        <item>Split Unequally</item>
+        <item>Split by Percentage</item>
+    </string-array>
 </resources>

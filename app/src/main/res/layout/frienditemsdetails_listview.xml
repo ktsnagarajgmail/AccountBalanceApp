@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardviewAdapter_FriendItemDetails"
+    android:layout_margin="7dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:layout_weight="15">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25sp"
+            android:id="@+id/frienditemsdetails_Day"
+            android:text="08"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="bottom|center_horizontal"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25sp"
+            android:id="@+id/frienditemsdetails_Month"
+            android:text="Jul"
+            android:textSize="12sp"
+            android:gravity="top|center_horizontal"/>
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/frienditemsdetails_Year"
+            android:text="2024"
+            android:textSize="12sp"
+            android:gravity="center"/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:layout_weight="60">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="For "
+                android:layout_marginStart="5dp"
+                android:textColor="?android:textColorPrimary"
+                android:gravity="center_vertical"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/idDesc_FriendItemsDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:hint="description"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:textColor = "?android:textColorPrimary" />
+            <!--text view for our course duration-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/idPaidBy_FriendItemsDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="5dp"
+                android:hint="PaidBy"
+                android:textSize="13sp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text=" paid "
+                android:textSize="13sp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/idTotalAmount_FriendItemsDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="TotalAmount"
+                android:textSize="13sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:layout_weight="25">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textSize="12sp"
+            android:gravity="bottom"
+            android:paddingStart="5dp"
+            android:textStyle="bold"
+            android:hint="You Owe"
+            android:id="@+id/oweDetails"/>
+        <TextView
+            android:id="@+id/idSplitAmt_FriendItemsDetail"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingStart="5dp"
+            android:hint="SplitAmt"
+            android:gravity="left|center_vertical"/>
+    </LinearLayout>
+</LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

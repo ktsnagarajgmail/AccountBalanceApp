@@ -7,19 +7,53 @@
     android:background="@drawable/custom_box_cardview"
     tools:context=".NewItems">
 
-    <TextView
+<!--    <TextView
         android:id="@+id/txtViewNewEntry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:text="New Entry"
         android:textSize="25dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"/>-->
 
-    <RadioGroup
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="710sp"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/custombox_cardview_white"
+        android:id="@+id/fragmentNELinearLayout">
+        <!--
+        android:background="@color/white"
+        android:layout_below="@+id/txtViewNewEntry"-->
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayoutNEFragments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Split"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Individual"/>
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:id="@+id/viewpagerNEFragment"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+    <!--<RadioGroup
         android:layout_width="394dp"
         android:layout_height="57dp"
         android:layout_below="@+id/txtViewNewEntry"
@@ -68,16 +102,128 @@
         android:layout_marginTop="5dp"
         android:layout_marginStart="15dp" />
 
+    <EditText
+        android:id="@+id/splitwith"
+        android:layout_width="348dp"
+        android:layout_height="80dp"
+        android:hint="Splitwith"
+        android:inputType= "textCapWords"
+        android:textColorHint="@color/white"
+        android:layout_below="@+id/editAmount"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="35dp" />
+
     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Splitwith IDs"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/newItemsEmailIdsBtn"
+        android:layout_below="@+id/splitwith"/>
+
+    &lt;!&ndash;<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newItemsLinearLayout"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/splitwith"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_view_column_24"
+            android:text="Equally"
+            android:textSize="10sp"
+            android:layout_margin="5dp"
+            android:id="@+id/btnEqually"/>
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_equalizer_24"
+            android:textSize="10sp"
+            android:text="Share"
+            android:layout_margin="5dp"
+            android:id="@+id/btnShare"/>
+        <Button
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_percent_24"
+            android:textSize="10sp"
+            android:layout_margin="5dp"
+            android:text="Percentage"
+            android:id="@+id/btnPercentage"/>
+
+    </LinearLayout>&ndash;&gt;
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:id="@+id/fragmentLinearLayout"
+        android:layout_below="@+id/newItemsEmailIdsBtn">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayoutFragments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Equally" />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Percentage"/>
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_below="@+id/tablayoutFragments"
+            android:layout_width="match_parent"
+            android:id="@+id/viewpagerFragment"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dropdown_splitmenu"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragmentLinearLayout"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        app:startIconDrawable="@drawable/baseline_point_of_sale_24"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/teal_700"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <AutoCompleteTextView
+            android:layout_width="325dp"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:id="@+id/autocompletedrodown"
+            android:hint="Paid By"
+            android:inputType="none"
+            android:layout_weight="1"
+            android:layout_gravity="center"/>
+    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--<Button
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
-        android:layout_height="44dp"
-        android:layout_below="@+id/editAmount"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragmentNELinearLayout"
+        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/black"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:text="Add" />
+        android:text="Add" />-->
 
 </RelativeLayout>

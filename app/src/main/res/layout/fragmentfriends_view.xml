@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardviewFragmentsAdaptor"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            style="@style/circular"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:id="@+id/friendsProfileImage"
+            android:src="@drawable/profile"/>
+
+        <TextView
+            android:id="@+id/idFragName"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="Name"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/idFragOweDetails"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="You owe / Owes you"
+                android:textSize="12sp"
+                android:gravity="center"/>
+        <!--text view for our course duration-->
+            <TextView
+                android:id="@+id/idFragAmount"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center|top"
+                android:textSize="18sp"
+                android:text="Amount"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

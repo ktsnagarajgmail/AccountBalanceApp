@@ -10,5 +10,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#FFC0C0C0</color>
+    <color name="grey_Strong">#606060</color>
     <color name="gold">#FFD4AF37</color>
+    <color name="red">#FFFF0000</color>
+    <color name="blue">#FF040273</color>
+    <color name="green">#00C000</color>
 </resources>

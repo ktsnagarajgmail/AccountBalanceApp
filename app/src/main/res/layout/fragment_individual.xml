@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Individual">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/rdG"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rdCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit(+)"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rdDebit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Debit(-)"
+            android:textColor="@color/black"
+            android:layout_marginStart="50dp"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editIndividualAmount"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:hint="0.00"
+        android:textColorHint="@color/black"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editIndividualDesc"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:hint="Description"
+        android:layout_gravity="center"
+        android:inputType= "textCapWords"
+        android:textColorHint="@color/black"
+        android:layout_toRightOf="@+id/editAmount"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:id="@+id/btnIndividualAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Add" />
+
+</LinearLayout>

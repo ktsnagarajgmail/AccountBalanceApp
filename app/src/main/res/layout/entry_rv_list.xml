@@ -1,51 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:elevation="8dp"
-    app:cardCornerRadius="4dp">
+    android:id="@+id/cardviewAdapter"
+    android:layout_margin="6dp">
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:orientation="horizontal"
-            android:weightSum="2">
-
+            android:weightSum="1">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:layout_weight=".28">
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="22sp"
+                android:id="@+id/entryrv_list_Day"
+                android:text="08"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="bottom|center_horizontal"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="18sp"
+                android:id="@+id/entryrv_list_Month"
+                android:text="Jul"
+                android:textSize="12sp"
+                android:gravity="top|center_horizontal"/>
+        </LinearLayout>
+            <!--<TextView
+                android:id="@+id/idDate"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight=".28"
+                android:text="Date"
+                android:textSize="12sp"
+                android:gravity="center"/>-->
+        <!--<TextView
                 android:id="@+id/idType"
-                android:layout_width="20dp"
+                android:layout_width="18dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="3dp"
+                android:layout_weight=".25"
                 android:text="Type"
                 android:gravity="center"
-                android:textColor = "?android:textColorPrimary" />
-
-
+                android:textColor = "?android:textColorPrimary" />-->
             <!--text view for our course duration-->
-            <TextView
-                android:id="@+id/idAmount"
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="3dp"
-                android:text="Amount"
-                android:gravity="center"
-                android:textColor = "?android:textColorPrimary" />
-
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:layout_weight=".5">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="16sp"
+                    android:textColor="?android:textColorPrimary"
+                    android:id="@+id/entry_rv_list_amountdes"/>
+                <TextView
+                    android:id="@+id/idAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Amount"
+                    android:gravity="start"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
             <TextView
                 android:id="@+id/idDesc"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight=".35"
                 android:text="Description"
-                android:gravity="center"
-                android:textColor = "?android:textColorPrimary" />
-
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"/>
         </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight=".09"
+            android:id="@+id/typeInImage"
+            android:src="@drawable/baseline_arrow_downward_24"/>
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
